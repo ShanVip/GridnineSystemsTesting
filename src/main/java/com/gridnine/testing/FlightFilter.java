@@ -68,7 +68,7 @@ class ExceedsTwoHoursGroundTimeFilter implements FlightFilterRule {
             totalMillis += (millisDeparture - millisArrival);
         }
 
-        double hoursDifference = (double) totalMillis / (1000.0 * 3600.0);
+        double hoursDifference = totalMillis / (1000.0 * 3600.0);
         return !(hoursDifference < 2);
     }
 }
